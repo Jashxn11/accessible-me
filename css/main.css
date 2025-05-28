@@ -1,35 +1,40 @@
+/* Added color and change bg color */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: whitesmoke;
   margin: 0;
   padding: 0;
+  color: black; 
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Header section improved */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0.65rem;
 }
 
+/* layout for container */
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* Setting img height  */
 img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* Styling the navigation */
 .main-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  background-color: grey;
 }
 
 .main-nav ul li {
@@ -39,33 +44,71 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: white;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.22rem;
+  padding: 1rem;
+}
+/* For keyboard focus */
+.main-nav ul li a:focus,
+.main-nav ul li a:hover {
+  background-color: grey;
+  outline: 2px solid whitesmoke;
 }
 
+/* link for keyboard */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: whitesmoke;
+  padding: 12px 14px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+/* Changes in form */
 form input,
 form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
 }
-
+/* Rescaling in :vertical */
 form textarea {
-  min-height: 150px;
-  max-height: 150px;
-  height: 150px;
-  resize: none;
+  min-height: 144px;
+  resize: vertical;
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
-  padding: 1rem;
+  background: black;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
   text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
 }
-
+form button:hover,
+form button:focus {
+  background-color: rebeccapurple;
+  outline: 2px solid white;
+}
+/* Footer section */
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
 }
